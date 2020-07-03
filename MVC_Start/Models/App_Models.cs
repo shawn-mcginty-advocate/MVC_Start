@@ -20,5 +20,10 @@ namespace MVC_Start.Models
     public string Title { get; set; }
   }
 
+    public class SortModel
+    {
+        public string userWord { get; set; }
+    }
+
   
 }

@@ -3,20 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing.Constraints;
+using Microsoft.CodeAnalysis;
 using MVC_Start.Models;
 
 namespace MVC_Start.Controllers
 {
   public class HomeController : Controller
   {
-    public IActionResult Index(int id)
+    public IActionResult Index()
     {
-      return View();
+            SortModel sort = new SortModel();
+            sort.userWord = "SampleWord";
+
+            return View(sort);
+
     }
 
-    public IActionResult IndexWithLayout()
+    [HttpPost]
+    public IActionResult Index(SortModel sort)
     {
-      return View();
+            //takes an word input and sorts characters alphabetically.
+            char[] arr = sort.userWord.ToCharArray();
+            Array.Sort(arr);
+            sort.userWord = new String(arr);
+
+            return View(sort);
+
+    }
+    public IActionResult About()
+    {
+            return View();
     }
 
     public IActionResult Contact()

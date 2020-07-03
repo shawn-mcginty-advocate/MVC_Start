@@ -2,14 +2,14 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
+@model SortModel
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-  <h2>Hello world!</h2>
-</body>
-</html>
+<form asp-controller="Home" asp-action="Index" method="post">
+    <p>Enter a word to be sorted: <input asp-for="userWord" /></p>
+
+    <button type="submit">Submit</button>
+</form>
+
+<p>Sorted Word: @Model.userWord </p>
+
+<br />
