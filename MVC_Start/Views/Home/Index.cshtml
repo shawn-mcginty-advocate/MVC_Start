@@ -5,11 +5,11 @@
 @model SortModel
 
 <form asp-controller="Home" asp-action="Index" method="post">
-    <p>Enter a word to be sorted: <input asp-for="userWord" /></p>
+    <p>Enter a word to be sorted: <input asp-for="SortWord" /></p>
 
     <button type="submit">Submit</button>
 </form>
 
-<p>Sorted Word: @Model.userWord </p>
+<p>Sorted Word: @Model.SortWord </p>
 
 <br />

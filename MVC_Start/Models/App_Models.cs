@@ -22,7 +22,7 @@ namespace MVC_Start.Models
 
     public class SortModel
     {
-        public string userWord { get; set; }
+        public string SortWord { get; set; }
     }
 
   

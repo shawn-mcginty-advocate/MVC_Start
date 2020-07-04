@@ -14,7 +14,7 @@ namespace MVC_Start.Controllers
     public IActionResult Index()
     {
             SortModel sort = new SortModel();
-            sort.userWord = "SampleWord";
+            sort.SortWord = "SampleWord";
 
             return View(sort);
 
@@ -24,9 +24,9 @@ namespace MVC_Start.Controllers
     public IActionResult Index(SortModel sort)
     {
             //takes an word input and sorts characters alphabetically.
-            char[] arr = sort.userWord.ToCharArray();
+            char[] arr = sort.SortWord.ToCharArray();
             Array.Sort(arr);
-            sort.userWord = new String(arr);
+            sort.SortWord = new String(arr);
 
             return View(sort);
 
