@@ -40,9 +40,9 @@ namespace MVC_Start.Controllers
     {
       GuestContact contact = new GuestContact();
 
-      contact.Name = "Manish Agrawal";
-      contact.Email = "magrawal@usf.edu";
-      contact.Phone = "813-974-6716";
+      contact.Name = "Shawn McGinty";
+      contact.Email = "shawnmcginty@usf.edu";
+      contact.Phone = "(724) 496-9275";
 
       
       /* alternate syntax to initialize object 
